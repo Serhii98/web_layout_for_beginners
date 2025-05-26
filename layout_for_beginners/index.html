@@ -9,95 +9,93 @@
 </head>
 
 <body>
-    <header>
-        <div class="header_container">
-            <a href="index.html" class="main_logo">
-                <img src="assets/images/main_logo.png" alt="Назва сайту">
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/main_logo.png" alt="Назва сайту" />
             </a>
-            <nav>
-                <ul class="main_menu">
-                    <li><a class="tab active" href="index.html">Home</a></li>
-                    <li><a class="tab" href="#tab2">Features</a></li>
-                    <li><a class="tab" href="#tab3">Pricing</a></li>
-                    <li><a class="tab" href="#tab4">Blog</a></li>
+            <nav class="header__nav" id="navMenu">
+                <ul class="header__menu">
+                    <li><a class="header__tab header__tab--active" href="index.html">Home</a></li>
+                    <li><a class="header__tab" href="#tab2">Features</a></li>
+                    <li><a class="header__tab" href="#tab3">Pricing</a></li>
+                    <li><a class="header__tab" href="#tab4">Blog</a></li>
                 </ul>
             </nav>
-            <button class="header_button" type="button">Get started</button>
+            <button class="header__button" type="button" onclick="scrollToBottom()">Get started</button>
+            <div id="header__hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="header__bar1"></div>
+                <div class="header__bar2"></div>
+                <div class="header__bar3"></div>
+                <ul class="header__mobile-menu">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
         </div>
     </header>
+
     <main>
         <section class="hero">
-            <div class="hero_content">
-                <div class="text_block">
-                    <h1>Grow your subscription business</h1>
-                    <p>Outcome-centered products that reduce churn, optimize pricing, and grow your subscription
-                        business end-to-end.</p>
-                        <div class="get_started_content">
-                            <button class="get_started">Get started</button>
-                            <button class="circle-button">
-                                <img src="assets/images/arrow_down.png" alt="Стрілка вниз" class="icon"/>
-                              </button>
-                        </div>
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">Grow your subscription business</h1>
+                    <p class="hero__description">Outcome-centered products that reduce churn, optimize pricing, and grow
+                        your subscription business end-to-end.</p>
+                    <div class="hero__actions">
+                        <button class="hero__get-started" onclick="scrollToBottom()">Get started</button>
+                        <button class="hero__scroll-button">
+                            <img src="assets/images/arrow_down.png" alt="Стрілка вниз" class="hero__icon" />
+                        </button>
+                    </div>
                 </div>
-
-                <div class="image_block">
+                <div class="hero__image">
                     <img src="assets/images/hero.png" alt="Опис зображення">
                 </div>
             </div>
         </section>
 
         <section class="partners">
-            <div class="partners_content">
-                <ul class="partners_list">
-                    <li>
-                        <img src="assets/images/partner_1.png" alt="Опис зображення">
-                    </li>
-                    <li>
-                        <img src="assets/images/partner_2.png" alt="Опис зображення">
-                    </li>
-                    <li>
-                        <img src="assets/images/partner_3.png" alt="Опис зображення">
-                    </li>
-                    <li>
-                        <img src="assets/images/partner_4.png" alt="Опис зображення">
-                    </li>
-                    <li>
-                        <img src="assets/images/partner_5.png" alt="Опис зображення">
-                    </li>
+            <div class="partners__content">
+                <ul class="partners__list">
+                    <li><img src="assets/images/partner_1.png" alt="Опис зображення"></li>
+                    <li><img src="assets/images/partner_2.png" alt="Опис зображення"></li>
+                    <li><img src="assets/images/partner_3.png" alt="Опис зображення"></li>
+                    <li><img src="assets/images/partner_4.png" alt="Опис зображення"></li>
+                    <li><img src="assets/images/partner_5.png" alt="Опис зображення"></li>
                 </ul>
             </div>
         </section>
 
         <section class="subscription">
-            <div class="sub_content">
-                <div class="sub_image">
+            <div class="subscription__content">
+                <div class="subscription__image">
                     <img src="assets/images/subscription.png" alt="Опис зображення">
                 </div>
-
-                <div>
-                    <form class="sub_form">
-                        <p>
-                            Grow your subscription
-                        </p>
-                        <div class="input_item">
+                <div class="subscription__form-wrapper">
+                    <form class="subscription__form">
+                        <p class="subscription__title">Grow your subscription</p>
+                        <div class="subscription__input">
                             <label for="location">Location</label>
                             <input type="text" id="location">
                         </div>
-                        <div class="input_item">
+                        <div class="subscription__input">
                             <label for="type">Type</label>
                             <input type="text" id="type">
                         </div>
-                        <div class="input_item">
+                        <div class="subscription__input">
                             <label for="date">Date</label>
                             <input type="date" id="date">
                         </div>
-                        <button type="submit">SEND</button>
+                        <button class="subscription__submit" type="submit">SEND</button>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
