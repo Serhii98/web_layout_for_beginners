@@ -17,9 +17,9 @@
             <nav class="header__nav" id="navMenu">
                 <ul class="header__menu">
                     <li><a class="header__tab header__tab--active" href="index.html">Home</a></li>
-                    <li><a class="header__tab" href="#tab2">Features</a></li>
-                    <li><a class="header__tab" href="#tab3">Pricing</a></li>
-                    <li><a class="header__tab" href="#tab4">Blog</a></li>
+                    <li><a class="header__tab" href="/features">Features</a></li>
+                    <li><a class="header__tab" href="/pricing">Pricing</a></li>
+                    <li><a class="header__tab" href="/blog">Blog</a></li>
                 </ul>
             </nav>
             <button class="header__button" type="button" onclick="scrollToBottom()">Get started</button>
@@ -28,10 +28,10 @@
                 <div class="header__bar2"></div>
                 <div class="header__bar3"></div>
                 <ul class="header__mobile-menu">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/features">Features</a></li>
-                    <li><a href="/pricing">Pricing</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                    <li><a class="header__tab header__tab--active" href="index.html">Home</a></li>
+                    <li><a class="header__tab" href="/features">Features</a></li>
+                    <li><a class="header__tab" href="/pricing">Pricing</a></li>
+                    <li><a class="header__tab" href="/blog">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -47,12 +47,12 @@
                     <div class="hero__actions">
                         <button class="hero__get-started" onclick="scrollToBottom()">Get started</button>
                         <button class="hero__scroll-button">
-                            <img src="assets/images/arrow_down.png" alt="Стрілка вниз" class="hero__icon" />
+                            <img src="assets/images/arrow_down.png" alt="Стрілка вниз" onclick="scrollToBottom()" class="hero__icon" />
                         </button>
                     </div>
                 </div>
                 <div class="hero__image">
-                    <img src="assets/images/hero.png" alt="Опис зображення">
+                    <img src="assets/images/hero.png" alt="hero">
                 </div>
             </div>
         </section>
@@ -60,11 +60,11 @@
         <section class="partners">
             <div class="partners__content">
                 <ul class="partners__list">
-                    <li><img src="assets/images/partner_1.png" alt="Опис зображення"></li>
-                    <li><img src="assets/images/partner_2.png" alt="Опис зображення"></li>
-                    <li><img src="assets/images/partner_3.png" alt="Опис зображення"></li>
-                    <li><img src="assets/images/partner_4.png" alt="Опис зображення"></li>
-                    <li><img src="assets/images/partner_5.png" alt="Опис зображення"></li>
+                    <li><img src="assets/images/partner_1.png" alt="partner_1"></li>
+                    <li><img src="assets/images/partner_2.png" alt="partner_2"></li>
+                    <li><img src="assets/images/partner_3.png" alt="partner_3"></li>
+                    <li><img src="assets/images/partner_4.png" alt="partner_4"></li>
+                    <li><img src="assets/images/partner_5.png" alt="partner_5"></li>
                 </ul>
             </div>
         </section>
@@ -72,24 +72,24 @@
         <section class="subscription">
             <div class="subscription__content">
                 <div class="subscription__image">
-                    <img src="assets/images/subscription.png" alt="Опис зображення">
+                    <img src="assets/images/subscription.png" alt="su">
                 </div>
                 <div class="subscription__form-wrapper">
                     <form class="subscription__form">
                         <p class="subscription__title">Grow your subscription</p>
                         <div class="subscription__input">
                             <label for="location">Location</label>
-                            <input type="text" id="location">
+                            <input type="text" id="location"required>
                         </div>
                         <div class="subscription__input">
                             <label for="type">Type</label>
-                            <input type="text" id="type">
+                            <input type="text" id="type" required>
                         </div>
                         <div class="subscription__input">
                             <label for="date">Date</label>
-                            <input type="date" id="date">
+                            <input type="date" id="date" required>
                         </div>
-                        <button class="subscription__submit" type="submit">SEND</button>
+                        <button class="subscription__submit" type="submit" onclick="handleFormSubmit(event)">SEND</button>
                     </form>
                 </div>
             </div>
