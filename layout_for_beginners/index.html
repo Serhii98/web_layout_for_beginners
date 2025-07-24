@@ -22,8 +22,8 @@
                     <li><a class="header__tab" href="/blog">Blog</a></li>
                 </ul>
             </nav>
-            <button class="header__button" type="button" onclick="scrollToBottom()">Get started</button>
-            <div id="header__hamburger-icon" onclick="toggleMobileMenu(this)">
+            <button class="header__button" type="button">Get started</button>
+            <div id="header__hamburger-icon">
                 <div class="header__bar1"></div>
                 <div class="header__bar2"></div>
                 <div class="header__bar3"></div>
@@ -45,9 +45,9 @@
                     <p class="hero__description">Outcome-centered products that reduce churn, optimize pricing, and grow
                         your subscription business end-to-end.</p>
                     <div class="hero__actions">
-                        <button class="hero__get-started" onclick="scrollToBottom()">Get started</button>
+                        <button class="hero__get-started">Get started</button>
                         <button class="hero__scroll-button">
-                            <img src="assets/images/arrow_down.png" alt="Стрілка вниз" onclick="scrollToBottom()" class="hero__icon" />
+                            <img src="assets/images/arrow_down.png" alt="Стрілка вниз" class="hero__icon" />
                         </button>
                     </div>
                 </div>
@@ -89,13 +89,13 @@
                             <label for="date">Date</label>
                             <input type="date" id="date" required>
                         </div>
-                        <button class="subscription__submit" type="submit" onclick="handleFormSubmit(event)">SEND</button>
+                        <button class="subscription__submit" type="submit">SEND</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>

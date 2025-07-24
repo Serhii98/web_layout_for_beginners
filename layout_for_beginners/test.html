@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Test Form</title>
+</head>
+<body>
+
+<form class="subscription__form">
+  <input type="text" required id="location" placeholder="Location" />
+  <input type="text" required id="type" placeholder="Type" />
+  <input type="date" required id="date" />
+  <button type="submit">SEND</button>
+</form>
+
+<script>
+  const form = document.querySelector('.subscription__form');
+  console.log('Form found:', form);
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    console.log('Submit handler called');
+    alert('Form submit intercepted!');
+  });
+</script>
+
+</body>
+</html>
